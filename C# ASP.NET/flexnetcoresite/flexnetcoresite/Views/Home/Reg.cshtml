@@ -1,0 +1,73 @@
+﻿@model flexnetcoresite.Models.Users 
+@{
+    ViewData["Title"] = "Reg";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Пушистые булочки|Регистрация</title>
+    <link href="~/css/Site.css" rel="stylesheet" />
+    <link href="~/css/Blocks.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('../../imagems/unnamed.png');
+        }
+        .testsize{
+            font-size:16px;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="block1">
+        <a href="~/Home/Index">Главная</a>
+        <a href="~/Home/Cab">Личный кабинет</a>
+        
+        <form asp-antiforgery="true" asp-controller="Home" asp-action="Reg">
+            <div>
+                <div class="validation" asp-validation-summary="ModelOnly"></div>
+                <!--<form id="re" method="post">-->
+                <div>
+                    <input type="text" asp-for="Login" placeholder="Логин" /><br />
+                    <span asp-validation-for="Login" class="testsize"></span><br />
+                </div>
+                <div>
+                    <input type="password" placeholder="Пароль" asp-for="Password" /><br />
+                    <span asp-validation-for="Password" class="testsize"></span><br />
+                </div>
+                <div>
+                    <input type="text" placeholder="e-mail" asp-for="Email" /><br />
+                    <span asp-validation-for="Email" class="testsize"></span><br />
+                </div>
+                
+
+                <div>
+                    <input type="submit" value="Зарегистрировать"/>
+                </div>
+            </div>
+        </form>
+        @section scripts{
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.mi.."></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0.."></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtr.."></script>
+        }
+
+
+    </div>
+
+    <article>
+        <footer>
+            Интренет-магазин пушистых товаров "Серая булочка", 2020.<br />
+            р-н Зюзино, Москва, 117638 <br />
+            +7(228)-133-73-22
+        </footer>
+    </article>
+</body>
+</html>

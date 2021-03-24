@@ -1,0 +1,47 @@
+﻿body {
+    background-image: url('../FlexImagems/background39.png');
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', 'Comic Sans MS';
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: black;
+    background: dimgray;
+    box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+    a:hover {
+        background: DarkSlateGray;
+        box-shadow: 0 15px 20px Indigo;
+        color: white;
+        transform: translateY(-7px);
+    }
+
+article {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+footer {
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 80px;
+    background-color: dimgray;
+    color: white;
+    font-family: 'Comic Sans MS';
+   
+}

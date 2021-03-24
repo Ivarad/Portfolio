@@ -1,0 +1,87 @@
+﻿@model IEnumerable<flexnetcoresite.Models.Products>
+@{
+    ViewData["Title"] = "Katalog";
+}
+
+@{
+    Layout = null;
+}
+@{int flex;
+    string helpflex;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Пушистые булочки|Каталог</title>
+    <link href="~/css/Site.css" rel="stylesheet" />
+    <link href="~/css/Blocks.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('../../imagems/unnamed.png');
+        }
+    </style>
+</head>
+<body>
+    <a href="~/Home/Index">Главная</a>
+    <a href="~/Home/Trash">Корзина</a>
+    <div class="block1">
+        <h1>Каталог</h1>
+    </div>
+
+    <div class="block1">
+        <p>Фильтрация</p>
+        <input type="text" name="Towar" placeholder="Поиск" /> <br />
+        <a href="">Найти</a>
+    </div>
+    <div class="block1">
+        <p>Товары:</p>
+    </div>
+
+    @foreach (var item in Model)
+    {
+        flex = item.ID_Product - 1;
+
+        helpflex = "~/imagems/Image3.jpg";
+
+        <div class="block4">
+            @if (flex == 1)
+            {<img src="~/imagems/Image1.jpg" width="650" height="550" />}
+            @if (flex == 2)
+            {<img src="~/imagems/Image2.jpg" width="650" height="550" />}
+            @if (flex == 3)
+            {<img src="~/imagems/Image3.jpg" width="650" height="550" />}
+            @if (flex == 4)
+            {<img src="~/imagems/Image4.jpg" width="650" height="550" />}
+            @if (flex == 5)
+            {<img src="~/imagems/Image5.jpg" width="650" height="550" />}
+            @if (flex == 6)
+            {<img src="~/imagems/Image6.jpg" width="650" height="550" />}
+            @if (flex == 7)
+            {<img src="~/imagems/Image7.jpg" width="650" height="550" />}
+            @if (flex == 8)
+            {<img src="~/imagems/Image8.jpg" width="650" height="550" />}
+            @if (flex == 9)
+            {<img src="~/imagems/Image9.jpg" width="650" height="550" />}
+            @if (flex == 10)
+            {<img src="~/imagems/Image10.jpg" width="650" height="550" />}
+        </div>
+
+        <div class="block1">
+            <p><li>@item.Title.  @item.Description @item.Price <a href="/Home/AddToCart?ID=@item.ID_Product">В корзину</a> </li></p>
+            
+        </div>
+    }
+
+
+    <article>
+        <footer>
+            Интренет-магазин пушистых товаров "Серая булочка", 2020.<br />
+            р-н Зюзино, Москва, 117638 <br />
+            +7(228)-133-73-22
+        </footer>
+    </article>
+
+</body>
+</html>

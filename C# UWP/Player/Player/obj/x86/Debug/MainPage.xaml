@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="Player.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Player"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Pivot Title="Плеер">
+            <PivotItem Header="Файл">
+                <StackPanel>
+                    <Grid>
+                        <MediaElement x:ConnectionId='7' x:Name="media" AutoPlay="False"/>
+                        <TextBlock x:ConnectionId='8' x:Name="textBlock" HorizontalAlignment="Left" Margin="104,540,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                        <CommandBar Margin="570,478,704,0" OverflowButtonVisibility="Collapsed" IsOpen="False" Opacity="1">
+                            <AppBarButton x:ConnectionId='11' Icon="Play" Label="Игра/Пауза"                x:Name="playp"/>
+                        </CommandBar>
+                        <DropDownButton Margin="697,482,0,0" VerticalAlignment="Top" Content="Настройки">
+                            <DropDownButton.Flyout>
+                                <MenuFlyout>
+                                    <MenuFlyoutItem x:ConnectionId='10' Text="Файл"               />
+                                </MenuFlyout>
+                            </DropDownButton.Flyout>
+                        </DropDownButton>
+                        <Slider x:ConnectionId='9' x:Name="volslide" HorizontalAlignment="Left" Margin="343,467,0,0" VerticalAlignment="Top" Width="100"                                      Header="Звук"/>
+
+                    </Grid>
+
+                </StackPanel>
+
+            </PivotItem>
+
+            <PivotItem Header="Плейлисты">
+                <Grid>
+
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <ListBox Grid.Column="0">
+                        <ListBoxItem>
+                            <TextBox x:ConnectionId='6' Name="NamePlaylist" PlaceholderText="Название"/>
+                        </ListBoxItem>
+
+                        <ListBoxItem>
+                            <Button x:ConnectionId='5' Name="ButCreatePlaylist" Content="Создать плейлист"                                />
+                        </ListBoxItem>
+
+                        <ListBoxItem>
+                            <Button x:ConnectionId='4' Name="ButAddMusic" Content="Добавить композицию"                          />
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <Button x:ConnectionId='3' Name="ButBackToFolders" Content="Вернуться к каталогам"                               />
+                        </ListBoxItem>
+                    </ListBox>
+
+                    <ScrollViewer Grid.Column="1">
+                        <ListBox x:ConnectionId='2' Name="ListPlaylists"/>
+                    </ScrollViewer>
+
+                </Grid>
+            </PivotItem>
+
+        </Pivot>
+
+
+    </Grid>
+</Page>
+

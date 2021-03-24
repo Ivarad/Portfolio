@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Textred.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Textred"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="35"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <MenuBar VerticalAlignment="Top" Grid.Row="0" Grid.ColumnSpan="6">
+            <MenuBarItem Title="File" >
+                <MenuFlyoutItem Text="Open" Click="MenuFlyoutItem_Click_7"/>
+                <MenuFlyoutItem Text="Save" Click="MenuFlyoutItem_Click_9" />
+                <MenuFlyoutItem Text="Save as" Click="MenuFlyoutItem_Click_8"/>
+                <MenuFlyoutItem Text="Print" Click="Print_Click"/>
+                <MenuFlyoutSeparator />
+                <MenuFlyoutItem Text="Close" Click="MenuFlyoutItem_Click"/>
+            </MenuBarItem>
+            <MenuBarItem Title="Edit" >
+                <MenuFlyoutItem Text="Undo" Click="MenuFlyoutItem_Click_1"/>
+                <MenuFlyoutItem Text="Cut" Click="MenuFlyoutItem_Click_2"/>
+                <MenuFlyoutItem Text="Copy" Click="MenuFlyoutItem_Click_3"/>
+                <MenuFlyoutItem Text="Paste" Click="MenuFlyoutItem_Click_4"/>
+                <MenuFlyoutItem Text="Delete" Click="MenuFlyoutItem_Click_5"/>
+                <MenuFlyoutItem Text="Select all" Click="MenuFlyoutItem_Click_6"/>
+                <MenuFlyoutItem Text="Find" Click="MenuFlyoutItem_Click_13"/>
+                <MenuFlyoutItem Text="Replace" Click="MenuFlyoutItem_Click_14"/>
+            </MenuBarItem>
+            <MenuBarItem Title="View" >
+                <MenuFlyoutItem Text="Help" Click="MenuFlyoutItem_Click_11"/>
+                <MenuFlyoutItem Text="About the program" Click="MenuFlyoutItem_Click_12"/>
+            </MenuBarItem>
+        </MenuBar>
+        <Button Name="Bold" Content="B" Grid.Row="1" Grid.Column="0" Click="Bold_Click"/>
+        <Button Name="Italics" Content="I" Grid.Row="1" Grid.Column="1" Width="29" FontStyle="Italic" Click="Italics_Click"/>
+        <Button Name="Underlined" Content="U_" Grid.Row="1" Grid.Column="2" Width="30" Click="Underlined_Click" />
+        <ComboBox Name="Font" PlaceholderText="Fonts" Grid.Row="1" Grid.Column="3" Width="78" DropDownClosed="Font_DropDownClosed"/>
+
+
+        <TextBox Name="Fontsize" PlaceholderText="Size text" Grid.Row="1" Grid.Column="4" Width="68" BeforeTextChanging="flexbeffont" TextChanged="Fontsize_TextChanged" MaxLength="3"/>
+        <ComboBox Name="ColorText" PlaceholderText="Color text" Grid.Row="1" Grid.Column="5" Width="118" DropDownClosed="ColorText_DropDownClosed">
+            <ComboBoxItem x:Name="Black" Content="Черный"/>
+            <ComboBoxItem x:Name="Red" Content="Красный"/>
+            <ComboBoxItem x:Name="Green" Content="Зеленый"/>
+            <ComboBoxItem x:Name="Blue" Content="Синий"/>
+            <ComboBoxItem x:Name="Yellow" Content="Желтый"/>
+        </ComboBox>
+        <RichEditBox x:Name="flextextwrite" Grid.Row="3" Grid.ColumnSpan="9" IsSpellCheckEnabled="False"/>
+
+
+
+    </Grid>
+</Page>

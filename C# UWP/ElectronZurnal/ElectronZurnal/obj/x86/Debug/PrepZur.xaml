@@ -1,0 +1,43 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="ElectronZurnal.PrepZur"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ElectronZurnal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="140"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:ConnectionId='2' x:Name="Back" HorizontalAlignment="Right" Grid.Row="0" FontSize="24" FontFamily="Comic Sans MS" Content="Назад к авторизации"                    Grid.ColumnSpan="6"  />
+        <ComboBox x:ConnectionId='3' x:Name="Discp" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1" FontSize="24" FontFamily="Comic Sans MS" PlaceholderText="Дисциплина"/>
+        <ComboBox x:ConnectionId='4' x:Name="Group" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" FontSize="24" FontFamily="Comic Sans MS" PlaceholderText="Группа"                                      />
+        <ComboBox x:ConnectionId='5' x:Name="Stud" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="1" FontSize="24" FontFamily="Comic Sans MS" PlaceholderText="Студент"/>
+        <DatePicker x:ConnectionId='6' x:Name="date" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="1" FontSize="24" FontFamily="Comic Sans MS" />
+        <ComboBox x:ConnectionId='7' x:Name="Assassment" HorizontalAlignment="Center" Grid.Column="4" Grid.Row="1" FontSize="24" FontFamily="Comic Sans MS" PlaceholderText="Оценка">
+            <ComboBoxItem Content="НБ"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+        </ComboBox>
+        <Button x:ConnectionId='8' x:Name="Save" HorizontalAlignment="Center" Grid.Column="5" Grid.Row="1" FontSize="24" FontFamily="Comic Sans MS" Content="Сохранить"                   />
+       <!-- <ListBox Name="Gridassess" Grid.Row="2" Grid.ColumnSpan="6" HorizontalAlignment="Center" FontSize="24" FontFamily="Comic Sans MS"/> -->
+        <controls:DataGrid x:ConnectionId='9' Name="Gridasses" AutoGenerateColumns="True"                                    Grid.Row="2" Grid.ColumnSpan="6" IsReadOnly="True"/>
+    </Grid>
+</Page>
+

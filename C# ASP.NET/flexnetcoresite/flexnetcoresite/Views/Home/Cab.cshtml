@@ -1,0 +1,65 @@
+﻿@model flexnetcoresite.Models.LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Пушистые булочки|Каталог</title>
+    <link href="~/css/Site.css" rel="stylesheet" />
+    <link href="~/css/Blocks.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('../../imagems/unnamed.png');
+        }
+        .expressblock{
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="block1">
+        <a href="~/Home/Index">Главная</a>
+
+        <form asp-action="Cab" asp-controller="Home" asp-antiforgery="true">
+            <div class="validation" asp-validation-summary="ModelOnly"></div>
+            <div>
+                <div>
+
+                    <input type="text" placeholder="Логин" asp-for="LoginT" /> <br />
+                    <span asp-validation-for="LoginT"></span>
+                </div>
+                <div>
+                    <input type="password" placeholder="Пароль" asp-for="PasswordT" /> <br />
+                    <span asp-validation-for="PasswordT"></span>
+                </div>
+                <div>
+                    <input type="submit" value="Войти" /> <br />
+                </div>
+
+            </div>
+        </form>
+        @section scripts{
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.mi.."></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0.."></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtr.."></script>
+        }
+        <form id="re" method="post">
+        </form>
+        <a href="~/Home/Reg">Регистрация</a>
+        <a href="~/Home/ZabPass">Забыли пароль?</a>
+    </div>
+    <article>
+        <footer>
+            Интренет-магазин пушистых товаров "Серая булочка", 2020.<br />
+            р-н Зюзино, Москва, 117638 <br />
+            +7(228)-133-73-22
+        </footer>
+    </article>
+
+</body>
+</html>

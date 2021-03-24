@@ -1,0 +1,51 @@
+﻿@model Cart
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Пушистые булочки|Корзина</title>
+    <link href="~/css/Site.css" rel="stylesheet" />
+    <link href="~/css/Blocks.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('../../imagems/unnamed.png');
+        }
+
+        .expressblock {
+        }
+    </style>
+</head>
+<body>
+    <a href="~/Home/Index">Главная</a>
+    <a href="~/Home/Zakaz">Оформить заказ</a>
+    <div class="block1">
+        <h1>Корзина</h1>
+    </div>
+    <div class="block1">
+
+        @if (Model.CartLines.Count == 0)
+        {
+            <p>Товаров в корзине нет</p><a href="~/Home/Katalog">Назад к товарам</a>
+        }
+        else
+        {
+            @for (int index = 0; index < Model.CartLines.Count; index++)
+            {
+                <li>@Model.CartLines[index].Title - @Model.CartLines[index].Price <a href="/Home/RemoveFromCart?Number=@index">Убрать</a> </li>
+            }
+        }
+    </div>
+    <article>
+        <footer>
+            Интренет-магазин пушистых товаров "Серая булочка", 2020.<br />
+            р-н Зюзино, Москва, 117638 <br />
+            +7(228)-133-73-22
+        </footer>
+    </article>
+
+</body>
+</html>

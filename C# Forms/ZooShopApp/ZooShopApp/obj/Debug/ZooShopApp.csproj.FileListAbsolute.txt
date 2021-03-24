@@ -1,0 +1,13 @@
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\bin\Debug\ZooShopApp.exe.config
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\bin\Debug\ZooShopApp.exe
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\bin\Debug\ZooShopApp.pdb
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.csprojAssemblyReference.cache
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.Form1.resources
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.Properties.Resources.resources
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.csproj.GenerateResource.cache
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.exe
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.pdb
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.RegistrationForm.resources
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.BDFlex.resources
+C:\Users\Иван\source\repos\ZooShopApp\ZooShopApp\obj\Debug\ZooShopApp.Table.resources

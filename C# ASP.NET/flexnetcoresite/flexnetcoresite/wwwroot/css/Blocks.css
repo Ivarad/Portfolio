@@ -1,0 +1,64 @@
+﻿body {
+    background-image: url('../imagems/background39.png');
+}
+
+.block1 {
+    width: auto;
+    height: auto;
+    background: gray;
+    border: solid 1px black;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Comic Sans MS';
+    position: relative;
+    top: 10%;
+    text-align: center;
+    font-size: 32px;
+}
+
+.block2 {
+    width: auto;
+    height: 400px;
+    background: gray;
+    border: solid 1px black;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Comic Sans MS';
+    position: relative;
+    top: 30%;
+    text-align: center;
+    font-size: 32px;
+}
+
+.block3 {
+    width: 225px;
+    height: 224px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px black;
+    position: center;
+    background-image: url('../imagems/testkisa.jpg');
+}
+
+.block4 {
+    width: 650px;
+    height:550px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px black;
+    position: center;
+}
+
+.block6 {
+    width: auto;
+    height: auto;
+    background: gray;
+    border: solid 1px black;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Comic Sans MS';
+    position: relative;
+    top: 10%;
+    text-align: center;
+    font-size: 24px;
+}
